@@ -85,9 +85,9 @@ module Hubspotter
     # Internal: The endpoint to POST to when updating a Contact
     #
     # Returns a String
-    def update_endpoint
-      "/#{ UPDATE_CONTACT_FORM_ID }"
-    end
+    # def update_endpoint
+    #   "/#{ UPDATE_CONTACT_FORM_ID }"
+    # end
 
 
   end
