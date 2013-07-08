@@ -5,7 +5,7 @@ module Hubspotter
     require 'httparty'
     require "addressable/uri"
 
-    CREATE_CONTACT_FORM_ID    = '5bc360e3-a605-42fa-8a17-a230bf7d0f46'
+    CREATE_CONTACT_FORM_ID    = ''
     UPDATE_CONTACT_FORM_ID    = ''
 
     BASE_URI = "https://forms.hubspot.com/uploads/form/v2/"
