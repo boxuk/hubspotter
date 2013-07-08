@@ -1,6 +1,6 @@
 # Hubspotter
 
-[![Code Climate](https://codeclimate.com/repos/51d3f7b313d63737290591d9/badges/ca9949c31727181a4f7f/gpa.png)](https://codeclimate.com/repos/51d3f7b313d63737290591d9/feed) [![Build Status](https://travis-ci.org/boxuk/hubspotter.png?branch=master)](https://travis-ci.org/boxuk/hubspotter)
+[![Code Climate](https://codeclimate.com/repos/51d3f7b313d63737290591d9/badges/ca9949c31727181a4f7f/gpa.png)](https://codeclimate.com/repos/51d3f7b313d63737290591d9/feed) [![Build Status](https://travis-ci.org/boxuk/hubspotter.png?branch=master)](https://travis-ci.org/boxuk/hubspotter) [![Coverage Status](https://coveralls.io/repos/boxuk/hubspotter/badge.png?branch=master)](https://coveralls.io/r/boxuk/hubspotter?branch=master)
 
 > Provides a simple Ruby wrapper for adding Contacts using the Forms API.
 
