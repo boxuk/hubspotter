@@ -28,10 +28,6 @@ class Hubspotter::ContactTest < Test::Unit::TestCase
                          :lastname   => 'FormSub',
                          :email       => 'formsub@hubspot.com' }
 
-    @newsletter_contact_details = { :first_name  => nil,
-                                    :last_name   => nil,
-                                    :email       => 'formsub@hubspot.com' }
-
     # Valid tracking details that can be given to Hubspotter::Contact initializer
     @tracking_details = { :hutk       => '60c2ccdfe4892f0fa0593940b12c11aa',
                           :ip_address => '192.168.1.12',
@@ -40,7 +36,6 @@ class Hubspotter::ContactTest < Test::Unit::TestCase
 
     # A valid Hubspotter::Contact
     @contact = Hubspotter::Contact.new(@contact_details, @tracking_details)
-    @email_contact = Hubspotter::Contact.new(@newsletter_contact_details, @tracking_details)
 
     # Mocked HubSpot Responses
     @success   = OpenStruct.new(:code => 204, :success? => true)
@@ -124,29 +119,6 @@ class Hubspotter::ContactTest < Test::Unit::TestCase
     def test_create_unsuccessfully_creates_a_contact
       HTTParty.expects(:post).returns(@error)
       assert_equal @error, @contact.create
-    end
-  #   test '#update submits the contact to hubspot' do
-  #     Hubspotter::Contact.
-  #       expects(:post).
-  #         with('/f460f2bb-ba65-4c5b-b595-324207c2a377', :body => @valid_params).
-  #           returns(@success)
-
-  #     @contact.update
-  #   end
-
-    def test_update_successfully_updates_a_contact
-      HTTParty.expects(:post).returns(@success)
-      assert_equal true, @contact.update
-    end
-
-    def test_update_posts_to_an_incorrect_form
-      HTTParty.expects(:post).returns(@not_found)
-      assert_equal false, @contact.update
-    end
-
-    def test_create_unsuccessfully_updates_a_contact
-      HTTParty.expects(:post).returns(@error)
-      assert_equal false, @contact.update
     end
 
     def test_create_url_returns_a_string
