@@ -5,3 +5,4 @@ gemspec
 
 gem "mocha", :require => false
 gem 'simplecov', :require => false
+gem 'coveralls', require: false

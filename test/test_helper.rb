@@ -1,5 +1,7 @@
 require 'simplecov'
 SimpleCov.start
+require 'coveralls'
+Coveralls.wear!
 require "test/unit"
 require "mocha/setup"
 
